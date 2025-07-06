@@ -40,6 +40,7 @@ def testEvaluatePostfix():
     (["10", "6", "9", "3", "/", "-", "*"], 30),
     (["6" , "9", "3" , "/" , "-", "10", "*"], 30), 
     # 10 * ( 6 - ( 9 / 3 ) ) = 10 * ( 6 - 3 ) = 30
+    (["2", "1", "+", "3", "*"], 9),
   ]
   passed = 0
   for i , (input_str , expected) in enumerate(test_cases , 1):
@@ -54,5 +55,6 @@ def testEvaluatePostfix():
       print(f"   Expected: {expected}, Got: {result}")
   total = len(test_cases)
   print(f"\nSummary: {passed}/{total} tests passed.")
+
 if __name__ == '__main__':
   testEvaluatePostfix()
